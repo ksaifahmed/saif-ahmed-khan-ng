@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +10,7 @@ import { Component, Input } from '@angular/core';
 
 
 export class NavbarComponent {
-  @Input() toggleProfileSection!: () => void; 
-  @Input() setProfileDown!: (value: boolean) => void;
+  @Output() setProfileDownEmitter = new EventEmitter<boolean>();
 
   isActive = false;
   navbarList = [
@@ -39,11 +38,11 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.isActive = !this.isActive;
-    this.toggleProfileSection();
+    this.setProfileDownEmitter.emit(this.isActive);
   }
 
   closeMenu() {
     this.isActive = false;
-    this.setProfileDown(false);
+    this.setProfileDownEmitter.emit(false);
   }
 }

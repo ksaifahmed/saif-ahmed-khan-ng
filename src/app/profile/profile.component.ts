@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Signal, signal } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
-  //@Input() pushDown!: () => boolean;
+  @Input() hamburgerActive!: Signal<boolean>;
+  @Input() backgroundHue!: Signal<number>;
 }

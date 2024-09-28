@@ -19,13 +19,12 @@
 <div class="App"> 
   <header class="header">
     <app-navbar class="navbar"
-      [toggleProfileSection]="toggleProfileSection" 
-      [setProfileDown]="setProfileDown">
+      (setProfileDownEmitter)="setProfileDown($event)">
     </app-navbar>
   </header>
 
 
-  <app-profile></app-profile>
+  <app-profile [hamburgerActive]="hamburgerActive" [backgroundHue]="backgroundHue"></app-profile>
   <!-- <app-skills></app-skills>
   <app-projects></app-projects>
   <app-education></app-education>

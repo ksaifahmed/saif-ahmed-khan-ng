@@ -18,12 +18,20 @@ import { ContactComponent } from "./contact/contact.component";
 export class AppComponent {
   currentYear = new Date().getFullYear();
   hamburgerActive = signal(false);
-
-  toggleProfileSection = () => {
-    this.hamburgerActive.set(!this.hamburgerActive);
-  }
+  backgroundHue = signal(0);
 
   setProfileDown = (value: boolean) => {
     this.hamburgerActive.set(value);
+  }
+
+  private intervalId: any;
+  ngOnInit() {
+    this.intervalId = setInterval(() => {
+      this.backgroundHue.update(hue => (hue + 1) % 360);
+    }, 100);
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
   }
 }
