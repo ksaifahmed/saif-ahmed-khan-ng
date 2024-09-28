@@ -1,0 +1,61 @@
+/* Basic button styling */
+
+.pulsingButton {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 5px 12px 5px;
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    box-shadow: 0 0 0 0 #FFC107;
+    border-radius: 10px;
+    background-color: #ed9834;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none !important;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Comment-out to have the button continue to pulse on mouseover */
+  
+  a.pulsingButton:hover {
+    font-size: 1.03rem;
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);    
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    color: #ffffff;
+  }
+  
+  
+  /* Animation */
+  
+  @-webkit-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+  
+  @-moz-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+  
+  @-ms-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+  
+  @keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+    }
+  }
+
+
+.pulsingButton__wrapper {
+    margin: auto;
+    padding: 15px 0;
+}
