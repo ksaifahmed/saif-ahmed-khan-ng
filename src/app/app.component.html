@@ -1,4 +1,4 @@
-<nav class="navbar active"><a href="/" class="nav-branding" id="nav-branding">ksa</a>
+<!-- <nav class="navbar active"><a href="/" class="nav-branding" id="nav-branding">ksa</a>
   <ul class="nav-menu active">
     <li class="nav-item"><a class="nav-link" id="nav-link" routerLink="skills">Skills</a></li>
     <li class="nav-item"><a class="nav-link" id="nav-link" routerLink="projects">Projects</a></li>
@@ -10,4 +10,32 @@
 
 <div class="container">
   <router-outlet></router-outlet>
+</div> -->
+
+
+
+  
+
+<div className="App"> 
+  <header class="header">
+    <app-navbar class="navbar"
+      [toggleProfileSection]="toggleProfileSection" 
+      [setProfileDown]="setProfileDown">
+    </app-navbar>
+  </header>
+
+
+  <!-- <app-profile></app-profile>
+  <app-skills></app-skills>
+  <app-projects></app-projects>
+  <app-education></app-education>
+  <app-contact></app-contact> -->
+  
+  <footer className="footer">
+    <div className="footer__wrapper">
+        <h3 className="footer__text owner">Saif Ahmed Khan</h3>
+        <h5 className="footer__text">&copy; Copyright {{currentYear}}</h5>                
+    </div>
+  </footer>   
+
 </div>

@@ -1,0 +1,79 @@
+:root {
+    --primary-hue: 0;
+    --primary-saturation: 50%;
+    --primary-lightness: 50%;
+}
+
+.hero {
+    display: flex;
+    padding-top: 15px;
+    justify-content: center;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(#262626, hsla(var(--primary-hue), 100%, 70.2%, 50.2%));
+    animation: gradient-animation 5s linear infinite;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero.active {
+    transition: all 0.3s ease-in-out;
+    padding-top: 270px;
+}
+
+.hero__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero__title {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.hero__subtitle {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero__school__link {
+    text-decoration: none;
+    color: hsla(var(--primary-hue), 22%, 84.2%, 90);
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero__school__link:hover {
+    color: #ffc13b;
+}
+
+
+.image__wrapper, .text__wrapper {
+    padding: 20px;
+}
+
+.hero__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero__wrapper {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 630px;
+        align-items: flex-start;
+    }
+
+    .hero.active {
+        height: 900px;
+    }
+}

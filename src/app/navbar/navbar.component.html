@@ -1,0 +1,19 @@
+<nav [class.active]="isActive" class="navbar">
+    <a href="/" class="nav-branding" id="nav-branding">ksa</a>
+
+    <ul [class.active]="isActive" class="nav-menu">
+        @for (item of navbarList; track item) {
+        <li class="nav-item">
+            <a class="nav-link" id="nav-link" [href]="item.url" (click)="closeMenu()">
+                {{ item.title }}
+            </a>
+        </li>
+        }
+    </ul>
+
+    <div [class.active]="isActive" class="hamburger" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
