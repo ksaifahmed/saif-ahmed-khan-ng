@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Signal } from '@angular/core';
+import { skillsCategories } from './skills.dummy';
 
 @Component({
   selector: 'app-skills',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-
+  @Input() backgroundHue!: Signal<number>;
+  skillsCategories = skillsCategories
 }
