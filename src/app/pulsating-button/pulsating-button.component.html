@@ -1,6 +1,6 @@
 <div className="pulsingButton__wrapper">
     <a  href={{buttonLink}}
-        onclick="buttonClickEvent"
+        (click)="buttonClickEvent($event)"
         class="pulsingButton"
         [ngStyle]="getPulsatingStyles()">
         {{buttonText}}

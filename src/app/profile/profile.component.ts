@@ -12,7 +12,19 @@ export class ProfileComponent {
   @Input() hamburgerActive!: Signal<boolean>;
   @Input() backgroundHue!: Signal<number>;
 
-  doSth() {
-    console.log('clicked');
+  downloadCV(event: Event): void {
+    event.preventDefault();
+    
+    try {
+      const cvUrl = "files/Saif_Ahmed_Khan_CV.pdf";
+      const link = document.createElement('a');
+      
+      link.href = cvUrl;
+      link.download = "Saif_Ahmed_Khan_CV.pdf"
+      link.click();
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+      alert('An error occurred while downloading!');
+    }
   }
 }

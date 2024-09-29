@@ -16,7 +16,7 @@ export class PulsatingButtonComponent {
   @Input() boxShadowColor!: string;
   @Input() bgColor!: string;
   @Input() margin!: string;  
-  @Input() buttonClickEvent!: () => void;
+  @Input() buttonClickEvent!: (event: Event) => void;
 
   getPulsatingStyles = () => {
     return {
