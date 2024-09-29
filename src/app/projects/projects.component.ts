@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Signal,  } from '@angular/core';
+import { Projects } from './projects.dummy';
 
 @Component({
   selector: 'app-projects',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
-
+  @Input() backgroundHue!: Signal<number>;
+  projects = Projects;
 }

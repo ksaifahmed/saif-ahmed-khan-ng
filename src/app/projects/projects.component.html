@@ -1,1 +1,24 @@
-<p>projects works!</p>
+<section class="projects" id="projects" style='--primary-hue: {{backgroundHue()}}'>
+    <h2 class="projects__section__title">Featured Projects</h2>
+    <div class="projects__wrapper">
+        @for(project of projects; track project) {
+            <div class="project__tile" style='--tile-color: {{project.color}}'>
+                <img src={{project.imageUrl}} alt="Project Thumbnail" class="project__image"/>
+                <div class="project__tile__content">                
+                    <h3 class="project__tile__title">
+                        {{project.title}}
+                    </h3>
+                    <p class="project__tile__tech">
+                        {{project.technologies}}
+                    </p>
+                    <p class="project__tile__description">{{project.description}}</p>
+                    <div class="project__tile__links">
+                        <a href={{project.githubUrl}} class="project__tile__link__git" target="_blank" rel="noreferrer">Github</a>
+                        <a href={{project.extraUrl}} class="project__tile__link__demo" target="_blank" rel="noreferrer">Demo</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</section>   

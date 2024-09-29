@@ -1,0 +1,145 @@
+/* declare a new color variable */
+:root {
+    --tile-color: grey;
+}
+
+.project__tile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 30px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);    
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+.project__tile:hover {
+    transform: translateX(5px);
+    box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+}
+
+.project__image {
+    width: 506px;
+    height: 320px;
+    box-shadow: blanchedalmond;
+    margin: auto 0 auto 0;    
+}
+
+.project__tile__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project__tile__title {
+    font-size: 1.6rem;
+    color: var(--tile-color);
+    padding: 10px 0;
+}
+
+.project__tile__tech {
+    color: var(--tile-color);
+    font-weight: 500;
+    font-style: italic;    
+}
+
+.project__tile__description {
+    font-size: 1rem;
+    color: grey;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    height: fit-content;
+}
+
+.project__tile__links {
+    font-size: 1.2rem;
+    color: grey;
+    padding: 10px 0;
+}
+
+.project__tile__link__git {
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 1.2rem;    
+    color: var(--tile-color);
+    border: 3px solid var(--tile-color);
+    background-color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    padding: 10px 20px 14px 20px;
+    margin: 10px 15px 0 0;
+    transition: 0.5s ease;    
+}
+
+
+.project__tile__link__demo {
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--tile-color);
+    border: 3px solid var(--tile-color);    
+    border-radius: 40px;
+    text-decoration: none;
+    padding: 10px 20px 14px 20px;
+    margin: 10px 10px 0 0;
+    transition: 0.5s ease;
+}
+
+.project__tile__link__git:hover {
+    color: #fff;
+    background-color: var(--tile-color);
+    border: 3px solid var(--tile-color);
+}
+
+.project__tile__link__demo:hover {
+    color: var(--tile-color);
+    background-color: #fff;
+    border: 3px solid var(--tile-color);
+}
+
+
+@media screen and (max-width: 950px) {
+    .project__tile {
+        flex-direction: column;
+    }
+
+    .project__image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    .project__tile__link__git, .project__tile__link__demo {
+        font-size: 1rem;
+    }
+
+    .project__tile__description {
+        font-size: 0.9rem;
+    }
+}
+
+.projects {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    background: linear-gradient(hsla(var(--primary-hue), 100%, 70.2%, 50.2%), #707070);
+}
+
+
+.projects__section__title {
+    padding: 48px 0 24px 0;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: hsla(var(--primary-hue), 71%, 41.2%, 94%);
+}
