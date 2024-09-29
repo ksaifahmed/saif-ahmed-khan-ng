@@ -1,0 +1,143 @@
+.education__tile {
+    background: #fff;
+    width: 80%;
+    padding: 18px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 24px;
+    box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 7px -3px rgba(0, 0, 0, 0.75);
+    transition: 0.3s ease-in-out;
+}
+
+.education__tile:hover {
+    background: hsla(var(--primary-hue), 35%, 89%, 100%);
+    transform: translateX(5px);
+    box-shadow: 1px 1px 7px -3px hsla(var(--primary-hue), 71%, 83%, 38%);
+    -webkit-box-shadow: 1px 1px 7px -3px hsla(var(--primary-hue), 71%, 83%, 38%);
+    -moz-box-shadow: 1px 1px 7px -3px hsla(var(--primary-hue), 71%, 83%, 38%); 
+}
+
+.education__tile__logo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+}
+
+.education__tile__text {
+    width: 100%;
+}
+
+.education__tile__header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.education__tile__title {
+    font-size: 1.4rem;
+    width: 50%;
+    font-weight: 600;
+    padding: 18px 24px;
+    color: hsla(var(--primary-hue), 30%, 60%, 100%);
+}
+
+.education__tile__date {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    padding: 24px;
+    color: grey;
+}
+
+.education__tile__body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.education__tile__degree {
+    font-size: 1.2rem;
+    width: 40%;
+    color: grey;
+    font-weight: 500;
+    font-style: italic;
+    padding: 18px 24px;
+}
+
+.education__tile__result {
+    font-size: 1.2rem;
+    padding: 18px 24px;
+    font-style: italic;
+    font-weight: 500;
+    color: grey;
+}
+
+@media screen and (max-width: 900px) {
+    .education__tile {
+        width: 90%;
+    }
+    .education__tile__logo {
+        width: 120px;
+        height: 120px;
+    }
+    .education__tile__title {
+        font-size: 1.2rem;
+    }
+    .education__tile__date {
+        font-size: 1rem;
+    }
+    .education__tile__degree {
+        font-size: 1rem;
+    }
+    .education__tile__result {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .education__tile__title {
+        font-size: 1rem;
+        padding: 18px 12px;
+    }
+    .education__tile__date {
+        font-size: 0.8rem;
+        padding: 18px 12px;
+    }
+    .education__tile__degree {
+        font-size: 0.9rem;
+        padding: 18px 12px;
+    }
+    .education__tile__result {
+        font-size: 0.9rem;
+        padding: 18px 12px;
+    }    
+}
+
+@media screen and (max-width: 560px) {
+    .education__tile {
+        flex-direction: column;
+    }
+
+    .education__tile__logo {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+.education {
+    padding-bottom: 40px;
+    background: linear-gradient(#707070, hsla(var(--primary-hue), 100%, 70.2%, 50.2%));
+}
+
+.education__section__title {
+    font-size: 1.9rem;
+    font-weight: 600;
+    padding: 20px 0;
+    color: hsla(var(--primary-hue), 70%, 90.2%, 97%);
+}

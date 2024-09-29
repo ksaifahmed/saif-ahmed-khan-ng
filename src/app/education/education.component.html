@@ -1,1 +1,21 @@
-<p>education works!</p>
+<section class="education" id="education" style='--primary-hue: {{backgroundHue()}}'>
+    <h2 class="education__section__title">Education</h2>
+    <div class="education__wrapper">
+        @for(education of listOfEducation; track education) {
+            <div class="education__tile" >
+                <img class="education__tile__logo" src={{education.imgSrc}} alt="instituition logo" />
+                
+                <div class="education__tile__text">
+                    <div class="education__tile__header">
+                        <h3 class="education__tile__title" >{{education.title}}</h3>
+                        <h5 class="education__tile__date">{{education.date}}</h5>
+                    </div>
+                    <div class="education__tile__body">
+                        <h4 class="education__tile__degree">{{education.degree}}</h4>
+                        <h6 class="education__tile__result">{{education.result}}</h6>
+                    </div>
+                </div>    
+            </div>            
+        }                
+    </div>
+</section>   

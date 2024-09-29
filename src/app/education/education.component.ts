@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Signal,  } from '@angular/core';
+import { EducationList } from './education.dummy';
 
 @Component({
   selector: 'app-education',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
-
+  @Input() backgroundHue!: Signal<number>;
+  listOfEducation = EducationList;
 }
