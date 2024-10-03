@@ -10,7 +10,11 @@ import { ContactComponent } from "./contact/contact.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, NavbarComponent, ProfileComponent, SkillsComponent, ProjectsComponent, EducationComponent, ContactComponent],
+  imports: [
+    RouterOutlet, RouterLink, NavbarComponent, 
+    ProfileComponent, SkillsComponent, ProjectsComponent, 
+    EducationComponent, ContactComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

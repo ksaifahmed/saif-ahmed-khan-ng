@@ -1,1 +1,48 @@
-<p>contact works!</p>
+<section class="contact" id="contact" style='--primary-hue: {{backgroundHue()}}'>
+    <h2 class="contact__section__title">Get in Touch</h2>
+    <div class="contact__wrapper">
+
+        <div class="contact__content links">
+            @for(contact of listOfContacts; track contact) {
+                <div class="contact__tile">
+                    <a class="contact__link" 
+                        href={{contact.href}}
+                        target="_blank"
+                        rel="noreferrer">
+                        <img src={{contact.iconSrc}} class="contact__icon" alt="icon" />
+                        <p class='contact__link__text {{contact.type}}'>{{contact.contactText}}</p>
+                    </a>                        
+                </div>  
+            }
+        </div>
+
+        <div class="contact__message">
+            <app-loader #loader></app-loader>
+
+            <h3 class="contact__message__title">Leave Me A Message</h3>
+            <form class="contact__message__form" #form (submit)="sendEmail($event)">
+                
+                <input type="text" name="user_name" required
+                    class="contact__message__form__input" 
+                    placeholder="Your Name" 
+                />
+                
+                <input type="email" name="user_email" required
+                    class="contact__message__form__input" 
+                    placeholder="Your Email" 
+                />
+
+                <textarea name="message" required
+                    class="contact__message__form__input" 
+                    placeholder="Your Message" 
+                    (input)="adjustTextBoxHeight($event)"
+                ></textarea>
+
+                <input type="submit" value="Send Message"
+                    class="contact__message__form__button"
+                />
+
+            </form>
+        </div>          
+    </div>
+</section>
