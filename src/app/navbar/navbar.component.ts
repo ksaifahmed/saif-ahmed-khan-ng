@@ -17,22 +17,22 @@ export class NavbarComponent {
     {
       id: 2,
       title: "Skills",
-      url: "/skills"
+      url: "/#skills"
     },
     {
       id: 3,
       title: "Projects",
-      url: "/projects"
+      url: "/#projects"
     },
     {
       id: 1,
       title: "Education",
-      url: "/education"
+      url: "/#education"
     },
     {
       id: 4,
       title: "Contact",
-      url: "/contact"
+      url: "/#contact"
     }
   ];
 
