@@ -1,5 +1,6 @@
 const fs = require("fs");
-const targetPath = "./src/environments/environment.prod.ts";
+const targetProd = "./src/environments/environment.prod.ts";
+const targetDev = "./src/environments/environment.prod.ts";
 const envConfigFile = `
 export const environment = {
   production: true,
@@ -9,5 +10,8 @@ export const environment = {
 };
 `;
   
-fs.writeFileSync(targetPath, envConfigFile);
-console.log(`Output generated at ${targetPath}`);
+fs.writeFileSync(targetDev, envConfigFile);
+fs.writeFileSync(targetProd, envConfigFile);
+
+console.log(`Output generated at ${targetDev}`);
+console.log(`Output generated at ${targetProd}`);

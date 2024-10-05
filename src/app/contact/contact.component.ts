@@ -44,6 +44,7 @@ export class ContactComponent {
   }, (error) => {
     this.loader.hideProcessLoader();
       this.toastr.error('Something Went Wrong!', 'Error');
+      console.log(error);
   });
 
   }
