@@ -1,6 +1,6 @@
 const fs = require("fs");
 const targetProd = "./src/environments/environment.prod.ts";
-const targetDev = "./src/environments/environment.prod.ts";
+const targetDev = "./src/environments/environment.ts";
 const envConfigFile = `
 export const environment = {
   production: true,
